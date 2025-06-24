@@ -1,8 +1,19 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'styles/index/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/index/body.css' %}">
+{% endblock head %}
 {% block content %}
-    <p>
-        ISSO TUDO VEIO DO TEMPLATE!
-    </p>
+    <h1>Bem vindo a aplicação galeria em Django</h1>
+    <ul>
+        {% for id, card in cards.items %}
+            <li class="card">
+                <h2>{{ card.nome }}</h2>
+                <img src="{{ card.img_path }}" alt="{{ card.title }}">
+                <p>{{ card.legenda }}</p>
+            </li>
+        {% endfor %}
+    </ul>
     <a href="{% url 'outro' %}">LINK PARA OUTRA ROTA</a>
 {% endblock content %}
