@@ -1,6 +1,7 @@
 from django.urls import path
-from galeria.views import index
+from galeria.views import index, outro
 
 urlpatterns = [
-    path('', index),
+    path('', index, name='index'),
+    path('outro/', outro, name='outro'),
 ]
