@@ -1,0 +1,20 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'styles/galeria/artigo/body.css' %}">
+{% endblock head %}
+{% block content %}
+    <div class="titulo-artigo">
+        <h1>{{ artigo.titulo }}</h1>
+        <a href="{% url 'index' %}" class="back-link">← Voltar à Home</a>
+    </div>
+    <main>
+        <article>
+            <img src="{{ artigo.image_path }}" alt="{{ artigo.titulo }}">
+            <p class="legenda">{{ artigo.legenda }}</p>
+            <div class="content">
+                {{ artigo.artigo|linebreaks }}
+            </div>
+        </article>
+    </main>
+{% endblock content %}

@@ -11,6 +11,12 @@
   font-family: 'Arial', sans-serif;
 }
 
+.card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
