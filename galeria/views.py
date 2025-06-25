@@ -5,7 +5,7 @@ from galeria.models import ArtigoGaleria
 
 def index(request):
 
-    cards = ArtigoGaleria.objects.all()
+    cards = ArtigoGaleria.objects.filter(publicado=True).order_by('datahora').all()
 
     return render(request, 'galeria/index.html', { 'cards': cards })
 
