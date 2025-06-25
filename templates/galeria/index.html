@@ -7,10 +7,10 @@
 {% block content %}
     <h1>Bem vindo a aplicação galeria em Django</h1>
     <ul>
-        {% for id, card in cards.items %}
+        {% for card in cards %}
             <li class="card">
                 <h2>{{ card.nome }}</h2>
-                <img src="{{ card.img_path }}" alt="{{ card.title }}">
+                <img src="{{ card.image_path }}" alt="{{ card.title }}">
                 <p>{{ card.legenda }}</p>
             </li>
         {% endfor %}

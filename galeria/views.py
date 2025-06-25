@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from galeria.dados_teste import dados
+from galeria.models import ArtigoGaleria
 
 def index(request):
 
-    cards = dados
+    cards = ArtigoGaleria.objects.all()
+    print(cards)
 
     return render(request, 'galeria/index.html', { 'cards': cards })
 
 
 def outro(request):
+
     return render(request, 'galeria/outro.html')
 
