@@ -10,7 +10,11 @@
     </div>
     <main>
         <article>
-            <img src="{{ artigo.image_path }}" alt="{{ artigo.titulo }}">
+            {% if not artigo.imagem and not artigo.imagem_path %}
+                            <img src="{% static 'assets/images/image_not_found.jpg' %}" alt="{{ artigo.title }}">
+                        {% else %}
+                            <img src="{{ artigo.imagem|default:artigo.imagem_path }}" alt="{{ artigo.title }}">
+                        {% endif %}
             <p class="legenda">{{ artigo.legenda }}</p>
             <div class="content">
                 {{ artigo.artigo|linebreaks }}

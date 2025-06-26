@@ -12,7 +12,11 @@
                 <li class="card">
                     <a href="{% url 'artigo' card.id %}">  
                         <h2>{{ card.nome }}</h2>
-                        <img src="{{ card.image_path }}" alt="{{ card.title }}">
+                        {% if not card.imagem and not card.imagem_path %}
+                            <img src="{% static 'assets/images/image_not_found.jpg' %}" alt="{{ card.title }}">
+                        {% else %}
+                            <img src="{{ card.imagem|default:card.imagem_path }}" alt="{{ card.title }}">
+                        {% endif %}
                         <p>{{ card.legenda }}</p>
                     </a>
                 </li>
