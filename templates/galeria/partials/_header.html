@@ -1,4 +1,19 @@
 {% load static %}
 <header class="header">
-    <p> AQUI É O HEADER </p>
+    <div class="header-container">
+        <a href="{% url 'index' %}">
+            <img src="{% static 'assets/images/camera.png' %}" alt="logo">
+        </a>
+        <p>Galeria e Artigos em Django</p>
+        <div class="buscador">
+            <div class="buscador-fundo">
+                <form action="{%  url 'buscar' %}">
+                    <input type="text" placeholder="Buscar" name="buscar" id="buscar">
+                    <button type="submit">
+                        <img src="{% static 'assets/images/lupa.png' %}" alt="lupa">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </header>

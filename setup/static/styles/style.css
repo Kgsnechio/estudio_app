@@ -15,17 +15,130 @@ body {
 }
 
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-container a {
+  display: flex;
+  align-items: center;
+}
+
+.header-container img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.header-container img:hover {
+  transform: scale(1.1);
+}
+
+.header-container p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+}
+
+.buscador-fundo {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.buscador-fundo:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.buscador-fundo form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.buscador-fundo input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  width: 200px;
+  background: transparent;
+}
+
+.buscador-fundo input::placeholder {
+  color: #888;
+}
+
+.buscador-fundo button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.buscador-fundo button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.buscador-fundo button img:hover {
+  opacity: 0.8;
 }
 
 .footer {
-    margin-top: auto;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
+  margin-top: auto;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+
+  .header-container p {
+    display: none;
+  }
+
+  .buscador-fundo input {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .header-container img {
+    width: 35px;
+    height: 35px;
+  }
+
 }
