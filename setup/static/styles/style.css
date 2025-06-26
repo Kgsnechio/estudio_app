@@ -48,7 +48,7 @@ body {
   border-radius: 5px;
 }
 
-.header-container img:hover {
+.header-container img:hover{
   transform: scale(1.1);
 }
 
@@ -58,6 +58,21 @@ body {
   font-weight: bold;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+
+.header-container .login {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  padding: 15px 20px;
+  background-color: #000000;
+  border-radius: 25px;
+}
+
+.header-container .login:hover {
+  transform: scale(1.1);
 }
 
 .buscador {

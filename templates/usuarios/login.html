@@ -1,0 +1,26 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'styles/usuarios/login.css' %}">
+{% endblock head %}
+{% block content %}
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="">
+        {% csrf_token %}
+        {% for field in form.visible_fields %}
+            <div class="input-group">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <button type="submit">Entrar</button>
+    </form>
+    <div class="forgot-password">
+        <a href="#">Esqueceu sua senha?</a>
+    </div>
+    <div class="criar-conta">
+        <a href="{% url 'cadastro' %}">criar nova conta</a>
+    </div>
+</div>
+{% endblock content %}
