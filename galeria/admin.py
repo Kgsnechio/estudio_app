@@ -7,7 +7,7 @@ class ListarArtigosGaleria(admin.ModelAdmin):
     list_display = ('id', 'nome', 'titulo', 'categoria', 'publicado')
     list_display_links = ('id', 'nome', 'titulo')
     search_fields = ('id', 'nome', 'legenda', 'image_path', 'titulo', 'artigo', 'categoria', 'publicado')
-    list_filter = ('categoria', 'publicado')
+    list_filter = ('categoria', 'publicado', 'usuario')
     list_editable = ('categoria', 'publicado')
     list_per_page = 25
 

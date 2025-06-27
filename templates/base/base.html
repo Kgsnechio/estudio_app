@@ -11,16 +11,7 @@
     </head>
     <body>
         {% include 'base/partials/_header.html' %}
-        {% if messages %}
-            <div class="container mt-3">
-            {% for message in messages %}
-                <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-                </div>
-            {% endfor %}
-            </div>
-        {% endif %}
-
+        {% include 'base/partials/_alert.html' %}
         <main>
             {% block content %}
             {% endblock %}

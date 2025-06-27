@@ -95,3 +95,9 @@ body {
         margin: 20px;
     }
 }
+
+.error-message {
+    color: rgb(155, 0, 0);
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import User
 class CategoriaArtigoGaleria(models.Model):
     nome = models.CharField(max_length=255, unique=True)
     descricao = models.TextField(blank=True, null=True)
@@ -18,6 +19,7 @@ class ArtigoGaleria(models.Model):
     categoria = models.ForeignKey(CategoriaArtigoGaleria, on_delete=models.SET_NULL, null=True, blank=True)
     publicado = models.BooleanField(default=False)
     datahora = models.DateTimeField(default=datetime.now, blank=True)
+    usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=False, related_name='user')
 
     def __str__(self):
         return f'{self.nome} - {self.titulo}'

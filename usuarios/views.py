@@ -41,19 +41,6 @@ def cadastro(request):
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
             password = form.cleaned_data.get('password')
-            password2 = form.cleaned_data.get('password2')
-
-            if password and password2 and password != password2:
-                messages.error(request, 'Senhas diferentes.')
-                return redirect('cadastro')
-            
-            if User.objects.filter(username=username).exists():
-                messages.error(request, 'Nome de usuário ja cadastrado.')
-                return redirect('cadastro')
-            
-            if User.objects.filter(email=email).exists():
-                messages.error(request, 'Email ja cadastrado.')
-                return redirect('cadastro')
 
             user = User.objects.create_user(username=username, email=email, password=password)
             user.save()
@@ -62,3 +49,9 @@ def cadastro(request):
             return redirect('login')
 
     return render(request, 'usuarios/cadastro.html', { 'form': form })
+
+def logout(request):
+    auth.logout(request)
+    messages.success(request, 'Deslogado com sucesso.')
+    print('DESLOGOU AQUI')
+    return redirect('login')
