@@ -21,6 +21,28 @@ class ArtigoGaleria(models.Model):
     datahora = models.DateTimeField(default=datetime.now, blank=True)
     usuario = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=False, related_name='user')
 
+    def __init__(self, *args, **kwargs):
+        nome = kwargs.pop('nome', None)
+        legenda = kwargs.pop('legenda', None)
+        imagem_path = kwargs.pop('imagem_path', None)
+        titulo = kwargs.pop('titulo', None)
+        artigo = kwargs.pop('artigo', None)
+
+        super().__init__(*args, **kwargs)
+
+        if nome is not None:
+            self.nome = nome
+        if legenda is not None:
+            self.legenda = legenda
+        if imagem_path is not None:
+            self.imagem_path = imagem_path
+        if titulo is not None:
+            self.titulo = titulo
+        if artigo is not None:
+            self.artigo = artigo
+
+        self.publicado = True
+
     def __str__(self):
         return f'{self.nome} - {self.titulo}'
     

@@ -25,6 +25,18 @@ def artigo(request, artigo_id):
     return render(request, 'galeria/artigo.html', { 'artigo': artigo })
 
 def outro(request):
+
+    if ArtigoGaleria.objects.exists():
+        return render(request, 'galeria/outro.html')
+
+    from .dados_teste import dados 
+
+    cards = dados
+
+    for i, card in cards.items():
+        new_artigo = ArtigoGaleria(**card)
+        new_artigo.save()
+
     return render(request, 'galeria/outro.html')
 
 def buscar(request):

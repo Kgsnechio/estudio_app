@@ -3,7 +3,7 @@ dados = {
     1: {
         'nome': 'Skate',
         'legenda': 'Liberdade sobre quatro rodas! O skate vai além do esporte — é expressão, atitude e conexão com o mundo ao nosso redor. #SkateLife #SkateÉCultura #VivaOSkate',
-        'image_path': 'https://images.ctfassets.net/hrltx12pl8hq/4aF6vvw0ruLgoBkSe6o6kJ/7d5a578c5eb569d018840eaedf036989/4.jpg',
+        'imagem_path': 'https://images.ctfassets.net/hrltx12pl8hq/4aF6vvw0ruLgoBkSe6o6kJ/7d5a578c5eb569d018840eaedf036989/4.jpg',
         'titulo': 'A Prática do Skate — Muito Além de um Esporte',
         'artigo': """ O skate, ou skateboarding, é muito mais do que uma simples prática esportiva. Nascido na Califórnia na década de 1950, ele surgiu como uma alternativa para os surfistas em dias de mar calmo. Desde então, se espalhou pelo mundo e se tornou um símbolo de liberdade, criatividade e estilo de vida.
 
@@ -22,7 +22,7 @@ dados = {
     2: {
         'nome': 'Natureza',
         'legenda': 'A força da natureza em sua forma mais impressionante! Os vulcões mostram o poder e a beleza do nosso planeta em constante transformação. #NaturezaPoderosa #Vulcões #CiênciaDaTerra',
-        'image_path': 'https://images.ctfassets.net/hrltx12pl8hq/4kzWG72Pi925q9Gtc6hBQh/6bdbb560251e188bab5d3ea1ad195d6b/1.jpg',
+        'imagem_path': 'https://images.ctfassets.net/hrltx12pl8hq/4kzWG72Pi925q9Gtc6hBQh/6bdbb560251e188bab5d3ea1ad195d6b/1.jpg',
         'titulo': 'Vulcões — A Força Bruta do Planeta',
         'artigo': """Os vulcões são aberturas na crosta terrestre por onde escapam magma, gases e cinzas vindos do interior da Terra. São um dos fenômenos naturais mais fascinantes e, ao mesmo tempo, mais perigosos do planeta. A atividade vulcânica moldou paisagens, criou ilhas e contribuiu para a formação da atmosfera que conhecemos hoje.
 
@@ -42,7 +42,7 @@ dados = {
     3: {
         'nome': 'Musica',
         'legenda': 'A música é a linguagem universal da alma. Ela nos conecta, emociona e transforma momentos em memórias inesquecíveis. #AmorPelaMúsica #MúsicaÉVida #SomQueConecta',
-        'image_path': 'https://images.ctfassets.net/hrltx12pl8hq/15YloW4hbQ1rwIQifBJpY3/bf986edcfe1a1211f041f96dde9855ee/music.png',
+        'imagem_path': 'https://images.ctfassets.net/hrltx12pl8hq/15YloW4hbQ1rwIQifBJpY3/bf986edcfe1a1211f041f96dde9855ee/music.png',
         'titulo': 'Música — A Linguagem Universal da Alma',
         'artigo': """
         A música está presente em praticamente todas as culturas e épocas da história da humanidade. Desde os primeiros instrumentos feitos de ossos e pedras até as produções modernas e digitais, ela sempre acompanhou o ser humano como forma de expressão, comunicação e emoção.
