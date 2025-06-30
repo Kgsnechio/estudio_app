@@ -1,0 +1,156 @@
+.parent {
+    overflow: hidden; /* evitar colapso */
+    min-width: 500px;
+}
+
+.capa {
+    position: relative;
+    inset: 0px;
+    overflow: hidden;
+    -webkit-background-position: center;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.capa-content {
+    padding: 15%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.capa-content h1 {
+    font-size: 64px;
+    font-family: 'Overpass';
+    line-height: 1;
+    margin: 0;
+}
+
+.capa-content p {
+    font-size: 16px;
+    font-family: "Overpass";
+    font-weight: 600;
+}
+
+/* *************************   DESCRICAO ****************************  */
+
+.sobre-content {
+  width: 100%;
+  padding: 10% 5%;
+  font-family: Arial, sans-serif;
+  background-color: rgb(233, 203, 163);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre-content h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.descricao-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 2rem;
+}
+
+.descricao-content p {
+  font-family: 'Overpass';
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+.descricao-content img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  align-self: center;
+}
+
+.cards-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card-descricao {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card-descricao:hover {
+  transform: translateY(-5px);
+}
+
+.card-descricao h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-descricao p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Media Queries para responsividade */
+@media (min-width: 768px) {
+  .sobre-content h1 {
+    font-size: 3rem;
+  }
+
+  .descricao-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .descricao-content p {
+    flex: 1;
+    font-size: 1.2rem;
+  }
+
+  .descricao-content img {
+    flex: 1;
+    max-width: 400px;
+  }
+
+  .cards-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sobre-content {
+    padding: 3rem 2rem;
+  }
+
+  .descricao-content img {
+    max-width: 500px;
+  }
+
+  .card-descricao h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-descricao p {
+    font-size: 1.1rem;
+  }
+}

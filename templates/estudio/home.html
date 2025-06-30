@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'styles/estudio/home.css' %}">
+{% endblock head %}
+{% block content %}
+    <style>.capa {background-image: url("{% static 'assets/images/estudio/capa.jpg' %}");}</style>
+    <div class="parent">
+        <div class="capa">
+            <div class="capa-content">
+                <h1>Estudio de Yoga Satori</h1>
+                <p>Bem-vinda ao Estúdio Satori, onde cada aula é um convite à harmonia e ao autocuidado. Descubra a serenidade do yoga e cultive seu bem-estar físico e mental em um ambiente acolhedor e inspirador.</p>
+            </div>
+        </div>
+    </div>
+    <section class="sobre-content">
+        <h1>Sobre o Estúdio Satori: Nossa Missão e Valores</h1>
+        <div class="descricao-content">
+            <p>No Estúdio Satori, acreditamos que o yoga é uma ferramenta poderosa para transformação pessoal. Nossa instrutora, Emilie Fujimoto, iniciou sua jornada no yoga há mais de uma década, buscando equilíbrio e autoconhecimento. Apaixonada pela filosofia e pelos benefícios da prática, ela se certificou em Hatha e Vinyasa Yoga, aprimorando seu conhecimento em diversos retiros e workshops internacionais.
+            <br><br>Nossa missão é oferecer um espaço de acolhimento, onde você possa se conectar consigo mesma, encontrar serenidade e fortalecer corpo e mente.</p>
+            <img src="{% static 'assets/images/estudio/descricao.png' %}" alt="espaço de pratica de yoga">
+        </div>
+        <div class="cards-content">
+            <div class="card-descricao">
+                <h2>Acolhimento</h2>
+                <p>Um ambiente seguro e gentil para todos os níveis de prática.</p>
+            </div>
+            <div class="card-descricao">
+                <h2>Equilíbrio</h2>
+                <p>Físico, mental e emocional, para uma vida mais plena.</p>
+            </div>
+            <div class="card-descricao">
+                <h2>Evolução</h2>
+                <p>Incentivamos o crescimento contínuo em sua jornada pessoal.</p>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -15,13 +15,19 @@ body {
 }
 
 .header {
-  background-color: #333;
-  color: #fff;
-  padding: 15px 20px;
+  background-color: rgba(30 30 30 / 20%);
+  backdrop-filter: blur(10px);
+  /* background-color: #333;
+  color: #fff; */
+  padding: 10px 10px;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+ 
   z-index: 1000;
 }
 
@@ -38,6 +44,12 @@ body {
 .header-container a {
   display: flex;
   align-items: center;
+}
+.header-container .buscador-login-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-container img {
@@ -60,18 +72,20 @@ body {
   text-transform: uppercase;
 }
 
-.header-container .login {
+.header-container .login,
+.header-container .logo {
   color: #fff;
   text-decoration: none;
   font-size: 1rem;
   font-weight: bold;
   transition: transform 0.3s ease;
-  padding: 15px 20px;
+  padding: 10px 20px;
   background-color: #000000;
   border-radius: 25px;
 }
 
-.header-container .login:hover {
+.header-container .login:hover,
+.header-container .logo {
   transform: scale(1.1);
 }
 

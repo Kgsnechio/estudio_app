@@ -1,0 +1,26 @@
+/* Overpass Regular */
+@font-face {
+    font-family: 'Overpass';
+    src: url('/static/assets/fonts/overpass/Overpass-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Overpass Bold */
+@font-face {
+    font-family: 'Overpass';
+    src: url('/static/assets/fonts/overpass/Overpass-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Overpass Italic */
+@font-face {
+    font-family: 'Overpass';
+    src: url('/static/assets/fonts/overpass/Overpass-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}

@@ -1,27 +1,28 @@
 {% load static %}
 <header class="header">
     <div class="header-container">
-        <a href="{% url 'index' %}">
-            <img src="{% static 'assets/images/camera.png' %}" alt="logo">
+        <a href="{% url 'home' %}" class="logo">
+            悟り
         </a>
-        {% if user.is_authenticated %}
-            <form method="post" action="{% url 'logout' %}">
-                {% csrf_token %}
-                <button class="login" type="submit">Logout</button>
-            </form>
-        {% else %}
-            <a class="login" href="{% url 'login' %}">Login</a>
-        {% endif %}
-        <p>Galeria</p>
-        <div class="buscador">
-            <div class="buscador-fundo">
-                <form action="{%  url 'buscar' %}">
-                    <input type="text" placeholder="Buscar" name="buscar" id="buscar">
-                    <button type="submit">
-                        <img src="{% static 'assets/images/lupa.png' %}" alt="lupa">
-                    </button>
-                </form>
+        <div class="buscador-login-content">
+            <div class="buscador">
+                <div class="buscador-fundo">
+                    <form action="{%  url 'buscar' %}">
+                        <input type="text" placeholder="Buscar" name="buscar" id="buscar">
+                        <button type="submit">
+                            <img src="{% static 'assets/images/lupa.png' %}" alt="lupa">
+                        </button>
+                    </form>
+                </div>
             </div>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button class="login" type="submit">Logout</button>
+                </form>
+            {% else %}
+                <a class="login" href="{% url 'login' %}">Login</a>
+            {% endif %}
         </div>
     </div>
 </header>
