@@ -172,7 +172,10 @@ body {
 
 }
 
-
+/* Espaço do header */
+.espaco-header {
+  margin-top: 100px !important;
+}
 
 /* Container geral das mensagens */
 .messages {
