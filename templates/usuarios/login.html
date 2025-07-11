@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load socialaccount %}
 {% block head %}
     <link rel="stylesheet" href="{% static 'styles/usuarios/login.css' %}">
 {% endblock head %}
@@ -16,11 +17,18 @@
         {% endfor %}
         <button type="submit">Entrar</button>
     </form>
-    <div class="forgot-password">
+    <!-- <div class="forgot-password">
         <a href="#">Esqueceu sua senha?</a>
-    </div>
+    </div> -->
     <div class="criar-conta">
         <a href="{% url 'cadastro' %}">criar nova conta</a>
+    </div>
+    <hr>
+    <div class="social-login">
+        <a href="{% provider_login_url 'google' %}" class="social-login-button google">
+            <img src="{% static 'assets/images/google.ico' %}" alt="Google">
+            Entrar com Google
+        </a>
     </div>
 </div>
 {% endblock content %}

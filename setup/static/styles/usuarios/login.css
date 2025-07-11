@@ -101,3 +101,49 @@ body {
     font-size: 14px;
     margin-top: 5px;
 }
+
+
+/* SOCIAL ACOUNTS */
+.social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.social-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 260px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.social-login-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-login-button.google {
+    background: white;
+    color: #444;
+    border: 1px solid #ddd;
+}
+
+.social-login-button.google:hover {
+    background: #f7f7f7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.social-login-button:active {
+    transform: translateY(0);
+}
