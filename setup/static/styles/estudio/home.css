@@ -1,6 +1,11 @@
+main > *:first-child {
+    padding-top: 100px;
+}
+
 .parent {
     overflow: hidden; /* evitar colapso */
     min-width: 500px;
+    width: 100%;
 }
 
 .capa {

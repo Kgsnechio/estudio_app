@@ -150,12 +150,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
+
+# AUTENTICACION
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_LOGOUT_REDIRECT_URL = '/login'
 
-SOCIALACCOUNT_LOGGIN_ON_GET = True
+SOCIALACCOUNT_LOGIN_ON_GET = True
 
 
 # Provider specific settings
