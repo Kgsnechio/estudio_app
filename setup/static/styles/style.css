@@ -154,14 +154,6 @@ main {
   opacity: 0.8;
 }
 
-.footer {
-  text-align: center;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  width: 100%;
-}
-
 @media (max-width: 700px) {
 
   .header-container p {
@@ -176,6 +168,10 @@ main {
   .header-container img {
     width: 35px;
     height: 35px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
@@ -222,6 +218,72 @@ main {
   border-left: 5px solid #c0392b;
 }
 
+
+/* ==== FOOTER BASE ==== */
+.footer {
+  background: #1a1a1a;
+  color: #f5f5f5;
+  padding: 3rem 1.5rem 1.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.footer .title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.footer .descricao,
+.footer .contato-content span {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cccccc;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* ==== FOOTER CONTENT ==== */
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==== REDES SOCIAIS ==== */
+.redes-icons-content {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.redes-icons-content a {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.redes-icons-content a:hover {
+  color: #ffb347; /* Destaque suave */
+  transform: scale(1.1);
+}
+
+/* ==== FOOTER BOTTOM ==== */
+.footer-bottom {
+  border-top: 1px solid #333;
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+}
+
+
 /* Animação opcional */
 @keyframes fadeIn {
   from {
@@ -233,3 +295,4 @@ main {
     transform: translateY(0);
   }
 }
+
